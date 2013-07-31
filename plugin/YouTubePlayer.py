@@ -380,7 +380,7 @@ class YouTubePlayer():
         elif len(s) == 87:
             return s[4:23] + s[86] + s[24:85]
         elif len(s) == 86:
-            return s[2:63] + s[82] + s[64:82] + s[63]
+            return s[83:85] + s[26] + s[79:46:-1] + s[85] + s[45:36:-1] + s[30] + s[35:30:-1] + s[46] + s[29:26:-1] + s[82] + s[25:1:-1]
         elif len(s) == 85:
             return s[2:8] + s[0] + s[9:21] + s[65] + s[22:65] + s[84] + s[66:82] + s[21]
         elif len(s) == 84:
@@ -392,7 +392,7 @@ class YouTubePlayer():
         elif len(s) == 81:
             return s[56] + s[79:56:-1] + s[41] + s[55:41:-1] + s[80] + s[40:34:-1] + s[0] + s[33:29:-1] + s[34] + s[28:9:-1] + s[29] + s[8:0:-1] + s[9]            
         elif len(s) == 79:
-            return s[54] + s[77:54:-1] + s[39] + s[53:39:-1] + s[78] + s[38:34:-1] + s[0] + s[33:29:-1] + s[34] + s[28:9:-1] + s[29] + s[8:0:-1] + s[9]          
+            return s[54] + s[77:54:-1] + s[39] + s[53:39:-1] + s[78] + s[38:34:-1] + s[0] + s[33:29:-1] + s[34] + s[28:9:-1] + s[29] + s[8:0:-1] + s[9] 
         else:
             self.common.log(u'Unable to decrypt signature, key length %d not supported; retrying might work' % (len(s)))
 
